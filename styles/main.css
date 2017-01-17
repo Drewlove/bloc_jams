@@ -21,7 +21,7 @@ body{
     background-color: rgb(101,18,95);
 }
 
-.navbar .logo {
+.navbar > .logo {
     position: relative; 
     left: 2rem;
 } 
@@ -52,3 +52,13 @@ body{
     .column.flow-opposite {float: right;}
 }
 
+.clearfix::before,
+
+.clearfix::after {
+    content:" ";
+    display:table;
+}
+
+.clearfix:after{
+    clear:both;
+}

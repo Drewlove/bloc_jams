@@ -7,14 +7,18 @@ var animatePoints = function(points) {
           points[index].style.msTransform="scaleX(1) translateY(0)";
           points[index].styleWebkitTransform = "scaleX(1) translateY(0)";
       }
-
-  for (var i = 0; i < points.length; i++){
-        revealPoint(i);
-      }    
+    
+    forEach(points, revealPoint);
 };
 
+//var forEach = function(arrayName, func){
+//    for(var i=0; i < arrayName.length; i++) {
+//        func(i);
+//    }
+//}
+
 window.onload = function() {
-    if (window.innerHeight > 950) {
+    if (window.innerHeight > 950px) {
         animatePoints(pointsArray);
     }
 

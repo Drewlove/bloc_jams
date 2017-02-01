@@ -1,5 +1,4 @@
-//Code from the beginning of Checkpoint 12
-
+//This is the data
 var albumPicasso = {
      title: 'The Colors',
      artist: 'Pablo Picasso',
@@ -31,6 +30,7 @@ var albumPicasso = {
      ]
  };
 
+//This is how it appears, and responds to the user 
 var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'

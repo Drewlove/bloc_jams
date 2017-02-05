@@ -122,6 +122,7 @@ var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause">
 //Store state of playing songs
 var currentlyPlayingSong = null;
 
+
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
 

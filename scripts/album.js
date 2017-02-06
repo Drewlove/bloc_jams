@@ -44,7 +44,7 @@ var $row = $(template);
     var clickHandler = function(){
       var songNumber = $(this).attr('data-song-number');
         
-        if(currentlyPlayingSong) !== null){
+        if(currentlyPlayingSong !== null){
             //Revert to song number for currently playing song because user started playing new song.
             var currentlyPlayingCell = $('.song-item-number[data-song-number=" ' + currentlyPlayingSong + '"]');
             currentlyPlayingCell.html(currentlyPlayingSong);
@@ -117,6 +117,6 @@ var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause">
 var currentlyPlayingSong = null;
 
 
- document.ready(function() {
+ $(document).ready(function() {
      setCurrentAlbum(albumPicasso);
 });

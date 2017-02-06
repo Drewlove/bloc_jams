@@ -40,9 +40,6 @@ var createSongRow = function(songNumber, songName, songLength) {
       + '</tr>'
       ;
  
-<<<<<<< HEAD
-     return $(template);
-=======
 var $row = $(template);
     var clickHandler = function(){
       var songNumber = $(this).attr('data-song-number');
@@ -86,7 +83,6 @@ var $row = $(template);
     $row.hover(onHover, offHover);
     //#3
     return $row;
->>>>>>> checkpoint-18
  };
 
     var setCurrentAlbum = function(album) {

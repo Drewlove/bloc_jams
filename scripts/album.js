@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-//This is how it appears, and responds to the user 
-=======
-//This is how it appears, and responds to the user. 
->>>>>>> checkpoint-19
+
 var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'
@@ -16,11 +12,7 @@ var $row = $(template);
     var clickHandler = function(){
       var songNumber = parseInt($(this).attr('data-song-number'));
         
-<<<<<<< HEAD
-        if(currentlyPlayingSongNumber !== null){
-=======
         if(currentlyPlayingSong !== null){
->>>>>>> ac4a689b32f3442f305e61e22cf93df1ea0dfca7
             //Revert to song number for currently playing song because user started playing new song.
             var currentlyPlayingCell = $('.song-item-number[data-song-number=" ' + currentlyPlayingSongNumber + '"]');
             currentlyPlayingCell.html(currentlyPlayingSongNumber);
@@ -171,10 +163,6 @@ var currentSongFromAlbum = null;
 
  $(document).ready(function() {
      setCurrentAlbum(albumPicasso);
-<<<<<<< HEAD
      $previousButton.click(previousSong);
      $nextButton.click(nextSong);
  });
-=======
-});
->>>>>>> ac4a689b32f3442f305e61e22cf93df1ea0dfca7

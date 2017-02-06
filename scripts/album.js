@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 //This is how it appears, and responds to the user 
+=======
+//This is how it appears, and responds to the user. 
+>>>>>>> checkpoint-19
 var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'

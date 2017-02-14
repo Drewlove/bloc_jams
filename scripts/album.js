@@ -1,4 +1,3 @@
-//This is the data
 var albumPicasso = {
      title: 'The Colors',
      artist: 'Pablo Picasso',
@@ -44,7 +43,7 @@ var $row = $(template);
     var clickHandler = function(){
       var songNumber = $(this).attr('data-song-number');
         
-        if(currentlyPlayingSong) !== null){
+        if(currentlyPlayingSong !== null){
             //Revert to song number for currently playing song because user started playing new song.
             var currentlyPlayingCell = $('.song-item-number[data-song-number=" ' + currentlyPlayingSong + '"]');
             currentlyPlayingCell.html(currentlyPlayingSong);
@@ -65,7 +64,7 @@ var $row = $(template);
         var songNumber = songNumberCell.attr('data-song-number');
         
         if (songNumber !== currentlyPlayingSong){
-            songNumberCell.html(playButtomTemplate);
+            songNumberCell.html(playButtonTemplate);
         }
     };
     var offHover = function(event){
@@ -117,6 +116,6 @@ var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause">
 var currentlyPlayingSong = null;
 
 
- document.ready(function() {
+ $(document).ready(function() {
      setCurrentAlbum(albumPicasso);
 });

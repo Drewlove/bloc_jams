@@ -1,6 +1,6 @@
 //This is how it appears, and responds to the user 
 var setSong = function(songNumber) {
-    if (curentSoundFile) {
+    if (currentSoundFile) {
         currentSoundFile.stop();
     }
     
@@ -136,9 +136,9 @@ var previousSong = function() {
     }
     
     // Set a new current song
-    currentlyPlayingSongNumber = currentSongIndex + 1;
+    setSong(currentSongIndex+1);
     currentSoundFile.play(); 
-    currentSongFromAlbum = currentAlbum.songs[currentSongIndex];
+    updatePlayerBarSong();
 
     // Update the Player Bar information
     $('.currently-playing .song-name').text(currentSongFromAlbum.title);
@@ -170,9 +170,9 @@ var nextSong = function() {
     }
     
     // Set a new current song
-    currentlyPlayingSongNumber = currentSongIndex + 1;
+    setSong(currentSongIndex + 1);
     currentSoundFile.play(); 
-    currentSongFromAlbum = currentAlbum.songs[currentSongIndex];
+    updatePlayerBarSong();
 
     // Update the Player Bar information
     $('.currently-playing .song-name').text(currentSongFromAlbum.title);

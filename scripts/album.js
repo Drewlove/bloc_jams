@@ -293,5 +293,4 @@ var $nextButton = $('.main-controls .next');
      setupSeekBars();
      $previousButton.click(previousSong);
      $nextButton.click(nextSong);
-     });
-
+ });

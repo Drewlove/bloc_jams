@@ -1,4 +1,4 @@
-var builtCollectionItemTemplate=function(){
+var buildCollectionItemTemplate=function(){
     var template=
 
 '   <div class="collection-album-container column fourth">'

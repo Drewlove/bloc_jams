@@ -121,6 +121,11 @@ var $row = $(template);
      }
  };
 
+var setCurrentTimeInPlayerBar = function(currentTime){
+  currentTime = currentSoundFile.getDuration();
+  $('.current-time').text(parseInt(currentTime));
+};
+
 var updateSeekBarWhileSongPlays = function() {
      if (currentSoundFile) {
          // #10
@@ -128,8 +133,8 @@ var updateSeekBarWhileSongPlays = function() {
              // #11
              var seekBarFillRatio = this.getTime() / this.getDuration();
              var $seekBar = $('.seek-control .seek-bar');
- 
              updateSeekPercentage($seekBar, seekBarFillRatio);
+             setCurrentTimeInPlayerBar(currentTime);
          });
      }
  };
@@ -263,12 +268,15 @@ var nextSong = function() {
     
 };
 
-var updatePlayerBarSong = function() {
+var setTotalTimeInPlayerBar = function(totalTime){
+  $('.total-time').text(parseInt(totalTime));
+}
 
+var updatePlayerBarSong = function() {
     $('.currently-playing .song-name').text(currentSongFromAlbum.title);
     $('.currently-playing .artist-name').text(currentAlbum.artist);
     $('.currently-playing .artist-song-mobile').text(currentSongFromAlbum.title + " - " + currentAlbum.artist);
-
+    setTotalTimeInPlayerBar(totalTime);
 };
  
 // Album button templates
